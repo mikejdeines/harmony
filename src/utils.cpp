@@ -11,7 +11,7 @@ arma::mat kmeans_centers(const arma::mat& X, const int K) {
   // Call the function and receive its list output
   Rcpp::List res = kmeans(Rcpp::_["x"] = X.t(),
                           Rcpp::_["centers"] = K,
-                          Rcpp::_["iter.max"] = 1000,
+                          Rcpp::_["iter.max"] = 100,
                           Rcpp::_["nstart"] = 10,
                           Rcpp::_["algorithm"] = "Lloyd"
                           );
